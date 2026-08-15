@@ -41,7 +41,7 @@ When the program is executed:
 
 ## Uninstallation 
 
-To basically remove unmask from /usr/local/bin : 
+To basically remove Portage Unmask from /usr/local/bin : 
 ```sudo make uninstall```
 
 
