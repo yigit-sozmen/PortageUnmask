@@ -4,8 +4,8 @@ It easily appends package atoms directly to ```/etc/portage/package.unmask``` wi
 
 
 ## Features
-**Quick Package Unmasking : Appends package atoms directly to ```/etc/portage/package.unmask```.**
-**Clean System Integration : Includes a simple ```Makefile``` for fast system-wide installation to ```/usr/local/bin```.**
+- **Quick Package Unmasking : Appends package atoms directly to ```/etc/portage/package.unmask```.**
+- **Clean System Integration : Includes a simple ```Makefile``` for fast system-wide installation to ```/usr/local/bin```.**
 
 ## Installation
 
