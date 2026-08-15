@@ -9,9 +9,7 @@ It easily appends package atoms directly to ```/etc/portage/package.unmask``` wi
 
 ## Installation
 
-Clone repository to your desired location ( For example : /home/user/Downloads/ )
-``` git clone https://github.com/yigit-sozmen/PortageUnmask```
-and run ```sudo make install```
+Clone repository to your desired location and run makefile as root.
 
 **To Install :**
 ```
