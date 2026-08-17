@@ -39,7 +39,7 @@ To simply unmask multiple packages at once just simply type:
 
 **For example:**
 
-```sudo unmask -p www-client/firefox\nx11-misc/sddm'```
+```sudo unmask -p www-client/firefox\nx11-misc/sddm```
 
 ## How it works
 
