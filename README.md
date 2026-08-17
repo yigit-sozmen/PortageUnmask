@@ -15,7 +15,6 @@ Clone repository to your desired location and run makefile as root.
 ```
 git clone https://github.com/yigit-sozmen/PortageUnmask
 cd PortageUnmask
-chmod +x unmask.py
 sudo make install
 ```
 
