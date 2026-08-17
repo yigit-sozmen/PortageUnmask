@@ -36,6 +36,7 @@ sudo unmask -p 'www-client/firefox'
 
 To simply unmask multiple packages at once just simply type:
 ```\n``` at the end of the previous package.
+
 **For example:**
 
 ```sudo unmask -p www-client/firefox\nx11-misc/sddm'```
