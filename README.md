@@ -31,6 +31,13 @@ sudo unmask --package 'package'
 
 sudo unmask -p 'www-client/firefox'
 ```
+## Custom Directories
+
+Instead of unmasking using : ```/etc/portage/package.unmask```
+
+You can specify your own directory. For example: 
+
+```sudo unmask -p x11-misc/sddm -d /etc/portage/sddm.unmask```
 
 ## Multiple Package Unmasking
 
