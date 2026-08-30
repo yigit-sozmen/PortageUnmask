@@ -27,12 +27,10 @@ def user_input():
 
     return parser.parse_args()
 
-
-#UNMASK_FILE = "/etc/portage/package.unmask"
 def unmask_package(package,directory:str):
     print(f"Starting unmasking process for: {package}")
     args=user_input()
-    UNMASK_FILE ="/etc/portage/package.unmask" or  str(args.directory) 
+    UNMASK_FILE ="/etc/portage/package.unmask" or  str(args.directory)
     if os.geteuid() != 0:
         print("Error: this script must be run as root.")
         return False
