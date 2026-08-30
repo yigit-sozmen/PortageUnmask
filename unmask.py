@@ -4,7 +4,7 @@ import os
 import subprocess
 ## SIDENOTE : YOU SHOULD RUN THIS AS ROOT.
 
-UNMASK_FILE = "/etc/portage/package.unmask"
+
 
 
 def user_input():
@@ -18,14 +18,21 @@ def user_input():
         required=True,
         help="Package atom to unmask, e.g. =dev-python/foo-1.2.3"
     )
+    parser.add_argument(
+        "-d",
+        "--directory",
+        required=False,
+        help="To change unmask file directory. Default: '/etc/portage/package.unmask'"
+    )
 
     return parser.parse_args()
 
 
-def unmask_package(package):
+#UNMASK_FILE = "/etc/portage/package.unmask"
+def unmask_package(package,directory:str):
     print(f"Starting unmasking process for: {package}")
-
-    
+    args=user_input()
+    UNMASK_FILE ="/etc/portage/package.unmask" or  str(args.directory) 
     if os.geteuid() != 0:
         print("Error: this script must be run as root.")
         return False
@@ -44,7 +51,7 @@ def unmask_package(package):
 
 def main():
     args = user_input()
-    unmask_package(args.package)
+    unmask_package(args.package,args.directory)
 
 
 if __name__ == "__main__":
