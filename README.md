@@ -1,10 +1,10 @@
 # Portage Unmask
 Portage Unmask is a lightweight CLI tool for unmasking specified packages.
-It easily appends package atoms directly to ```/etc/portage/package.unmask``` without any need of text editors or manual navigation.
+It easily appends package atoms directly to ```/etc/portage/package.unmask``` or your desired direction without any need of text editors or manual navigation.
 
 
 ## Features
-- **Quick Package Unmasking : Appends package atoms directly to ```/etc/portage/package.unmask```.**
+- **Quick Package Unmasking : Appends package atoms directly to ```/etc/portage/package.unmask / custom direction```.**
 - **Clean System Integration : Includes a simple ```Makefile``` for fast system-wide installation to ```/usr/local/bin```.**
 
 ## Installation
