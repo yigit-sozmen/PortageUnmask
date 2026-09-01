@@ -39,6 +39,8 @@ You can specify your own directory. For example:
 
 ```sudo unmask -p x11-misc/sddm -d /etc/portage/sddm.unmask```
 
+If the directory you specified does not exist, program creates it automatically.
+
 ## Multiple Package Unmasking
 
 To simply unmask multiple packages at once just simply type:
