@@ -2,6 +2,9 @@
 import argparse
 import os
 import subprocess
+from os import mkdir
+
+
 ## SIDENOTE : YOU SHOULD RUN THIS AS ROOT.
 
 
@@ -27,25 +30,24 @@ def user_input():
 
     return parser.parse_args()
 
-def unmask_package(package,directory:str):
+def unmask_package(package,file_path:str="/etc/portage/package.unmask"):
     print(f"Starting unmasking process for: {package}")
     args=user_input()
     UNMASK_FILE ="/etc/portage/package.unmask" or  str(args.directory)
     if os.geteuid() != 0:
         print("Error: this script must be run as root.")
         return False
-
     try:
-        with open(UNMASK_FILE, "a") as file:
+        parent_directory = os.path.dirname(file_path)
+        if parent_directory:
+            os.makedirs(parent_directory, exist_ok=True)
+        with open(file_path, "a") as file:
             file.write(f"{package}\n")
-
-        print(f"Successfully added {package} to {UNMASK_FILE}")
+        print(f"Successfully added {package} to {file_path}")
         return True
-
     except OSError as error:
-        print(f"Error writing to {UNMASK_FILE}: {error}")
+        print(f"Error writing to {file_path}: {error}")
         return False
-
 
 def main():
     args = user_input()
